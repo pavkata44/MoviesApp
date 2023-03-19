@@ -10,15 +10,17 @@ import java.util.List;
 @RestController
 @RequestMapping("/profile")
 public class UserController {
-private final UserRepository userRepository;
 
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+private final UserService userService;
+
+    public UserController(UserService userService) {
+
+        this.userService = userService;
     }
 
     @GetMapping()
     public ResponseEntity<List<User>> getAllUsers(){
-        return ResponseEntity.ok(userRepository.findAll());
+        return userService.getAllUsers();
 
     }
 }
