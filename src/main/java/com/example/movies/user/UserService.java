@@ -6,12 +6,22 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    public  void addNewUser(User user) throws IllegalAccessException {
+      Optional<User>  userByUsername = userRepository.findUserByUsername(user.getUsername());
+        if(userByUsername.isPresent()) {
+            throw new IllegalAccessException("Username already exists");
+        }
+        userRepository.save(user);
+
+    }
 
     @GetMapping()
     public ResponseEntity<List<User>> getAllUsers(){
