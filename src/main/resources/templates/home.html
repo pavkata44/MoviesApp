@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
-  <link th:href="@{/style1.css}" rel="stylesheet" />
+  <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 <header>
   <div class ="container">
   <div class="logo">
     <a href="#" class="logo-container">
-      <img th:src="@{logo-proekta.png}" alt="Site Logo">
+      <a href="#"><img src="logo-proekta.png" alt="Site Logo"></a>
       <span class = "logo-text">FFMovies</span>
     </a>
   </div>
@@ -28,10 +28,87 @@
   </div>
   </div>
 </header>
+<section class="genres">
+  <h2>Movie Genres</h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="Action.jpg" alt="Action">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Action-Comedy.jpg" alt="Action-Comedy">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Adventure.jpg" alt="Adventure">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Animation.jpg" alt="Animation">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Comedy-Romance.jpg" alt="Comedy-Romance">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Comedy.jpg" alt="Comedy">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Crime.jpg" alt="Crime">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Drama.jpg" alt="Drama">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Fantasy.jpg" alt="Fantasy">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Horror.jpg" alt="Horror">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Mystery.jpg" alt="Mystery">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Romance.jpg" alt="Romance">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Sci-Fi.jpg" alt="Sci-Fi">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Superhero.jpg" alt="Superhero">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img src="Thriller.jpg" alt="Thriller">
+      <div class="overlay">
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Thymeleaf expressions can be used anywhere in the HTML document enclosed with th: prefix -->
-<h1 th:text="${greeting}"></h1>
-
-
 </body>
 </html>
