@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link th:href="@{/style1.css}" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class ="container">
+  <div class="logo">
+    <a href="#" class="logo-container">
+      <img th:src="@{logo-proekta.png}" alt="Site Logo">
+      <span class = "logo-text">FFMovies</span>
+    </a>
+  </div>
+  <div class="search">
+    <form>
+      <select>
+        <option value="titles">Titles</option>
+        <option value="celebs">Celebs</option>
+        <option value="companies">Companies</option>
+        <option value="keywords">Keywords</option>
+      </select>
+      <input type="text" placeholder="Search titles, celebs, and more">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  </div>
+</header>
+
+<!-- Thymeleaf expressions can be used anywhere in the HTML document enclosed with th: prefix -->
+<h1 th:text="${greeting}"></h1>
+
+
+</body>
+</html>

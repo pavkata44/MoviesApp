@@ -12,7 +12,7 @@ import java.util.Optional;
 @Service
 public class MovieService {
     @Autowired
-    private  MovieRepository movieRepository;
+    private final MovieRepository movieRepository;
 
     public MovieService(MovieRepository movieRepository) {
         this.movieRepository = movieRepository;
@@ -27,7 +27,7 @@ public class MovieService {
     }
 
     @GetMapping
-    public ResponseEntity<List<Movie>> getAllMovies(){
-        return ResponseEntity.ok(movieRepository.findAll());
+    public List<Movie> getAllMovies(){
+        return movieRepository.findAll();
     }
 }

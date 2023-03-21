@@ -1,6 +1,6 @@
-package com.example.movies.movie;
+package com.example.movies.genre;
 
-public enum Genre {
+public enum Genres {
     Comedy,
     SciFi,
     Horror,
