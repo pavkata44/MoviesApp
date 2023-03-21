@@ -23,6 +23,14 @@ public class UserService {
 
     }
 
+    public void signIn(User user){
+        Optional<User> userByUsername = userRepository.findUserByUsername(user.getUsername());
+        Optional<User> userByPassword = userRepository.findUserByPassword((user.getPassword()));
+        if(userByUsername.isPresent() && userByPassword.isPresent()){
+
+        }
+    }
+
     @GetMapping()
     public ResponseEntity<List<User>> getAllUsers(){
         return ResponseEntity.ok(userRepository.findAll());

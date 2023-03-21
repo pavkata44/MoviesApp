@@ -8,4 +8,5 @@ import java.util.Optional;
 @RepositoryRestResource
 public interface MovieRepository  extends JpaRepository<Movie,Long> {
     Optional<Movie> findMoviesByActors(String actor);
+    Optional<Movie> findMoviesByTitle(String title);
 }

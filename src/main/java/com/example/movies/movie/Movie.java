@@ -2,7 +2,9 @@ package com.example.movies.movie;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.boot.context.properties.bind.Name;
+import java.net.URL;
+
+
 
 @Entity
 @Table(name = "\"movie\"", schema = "movies")
@@ -23,15 +25,15 @@ public class Movie {
     private String actors;
 
     @Column(name = "movie_year")
-    private String year;
+    private Integer year;
 
     @Column(name =  "poster")
-    private String poster;
+    private URL poster;
 
     @Column(name = "description")
     private String description;
 
     @Column(name = "length")
-    private int length;
+    private Integer length;
 
 }
