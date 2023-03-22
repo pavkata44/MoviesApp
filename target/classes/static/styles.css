@@ -19,6 +19,7 @@ header {
 .search select {
     padding: 5px;
     margin-right: 5px;
+    height: 25.5px;
     border-radius: 3px;
     border: none;
 }

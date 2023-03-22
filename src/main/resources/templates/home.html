@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
-  <link rel="stylesheet" href="style1.css">
+  <link rel="icon" type="image/x-icon" th:href="@{logo-proekta.png}">
+  <link th:href="@{/style1.css}" rel="stylesheet" />
 </head>
 <body>
 <header>
   <div class ="container">
   <div class="logo">
     <a href="#" class="logo-container">
-      <a href="#"><img src="logo-proekta.png" alt="Site Logo"></a>
+      <a href="#"> <img th:src="@{logo-proekta.png}" alt="Site Logo"></a>
       <span class = "logo-text">FFMovies</span>
     </a>
   </div>
@@ -33,77 +33,77 @@
   <h2>Movie Genres</h2>
   <div class="grid-container">
     <div class="grid-item">
-      <img src="Action.jpg" alt="Action">
+      <img th:src="@{Action.jpg}" alt="Action">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Action-Comedy.jpg" alt="Action-Comedy">
+      <img th:src="@{Action-Comedy.jpg}" alt="Action-Comedy">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Adventure.jpg" alt="Adventure">
+      <img th:src="@{Adventure.jpg}" alt="Adventure">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Animation.jpg" alt="Animation">
+      <img th:src="@{Animation.jpg}" alt="Animation">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Comedy-Romance.jpg" alt="Comedy-Romance">
+      <img th:src="@{Comedy-Romance.jpg}" alt="Comedy-Romance">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Comedy.jpg" alt="Comedy">
+      <img th:src="@{Comedy.jpg}" alt="Comedy">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Crime.jpg" alt="Crime">
+      <img th:src="@{Crime.jpg}" alt="Crime">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Drama.jpg" alt="Drama">
+      <img th:src="@{Drama.jpg}" alt="Drama">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Fantasy.jpg" alt="Fantasy">
+      <img th:src="@{Fantasy.jpg}" alt="Fantasy">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Horror.jpg" alt="Horror">
+      <img th:src="@{Horror.jpg}" alt="Horror">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Mystery.jpg" alt="Mystery">
+      <img th:src="@{Mystery.jpg}" alt="Mystery">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Romance.jpg" alt="Romance">
+      <img th:src="@{Romance.jpg}" alt="Romance">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Sci-Fi.jpg" alt="Sci-Fi">
+      <img th:src="@{Sci-Fi.jpg}" alt="Sci-Fi">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Superhero.jpg" alt="Superhero">
+      <img th:src="@{Superhero.jpg}" alt="Superhero">
       <div class="overlay">
       </div>
     </div>
     <div class="grid-item">
-      <img src="Thriller.jpg" alt="Thriller">
+      <img th:src="@{Thriller.jpg}" alt="Thriller">
       <div class="overlay">
       </div>
     </div>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+  <link rel="icon" type="image/x-icon" th:href="@{logo-proekta.png}">
   <link th:href="@{/style1.css}" rel="stylesheet" />
 </head>
 <body>
@@ -10,7 +11,7 @@
   <div class ="container">
   <div class="logo">
     <a href="#" class="logo-container">
-      <img th:src="@{logo-proekta.png}" alt="Site Logo">
+      <a href="#"> <img th:src="@{logo-proekta.png}" alt="Site Logo"></a>
       <span class = "logo-text">FFMovies</span>
     </a>
   </div>
@@ -28,10 +29,87 @@
   </div>
   </div>
 </header>
+<section class="genres">
+  <h2>Movie Genres</h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img th:src="@{Action.jpg}" alt="Action">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Action-Comedy.jpg}" alt="Action-Comedy">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Adventure.jpg}" alt="Adventure">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Animation.jpg}" alt="Animation">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Comedy-Romance.jpg}" alt="Comedy-Romance">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Comedy.jpg}" alt="Comedy">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Crime.jpg}" alt="Crime">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Drama.jpg}" alt="Drama">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Fantasy.jpg}" alt="Fantasy">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Horror.jpg}" alt="Horror">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Mystery.jpg}" alt="Mystery">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Romance.jpg}" alt="Romance">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Sci-Fi.jpg}" alt="Sci-Fi">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Superhero.jpg}" alt="Superhero">
+      <div class="overlay">
+      </div>
+    </div>
+    <div class="grid-item">
+      <img th:src="@{Thriller.jpg}" alt="Thriller">
+      <div class="overlay">
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Thymeleaf expressions can be used anywhere in the HTML document enclosed with th: prefix -->
-<h1 th:text="${greeting}"></h1>
-
-
 </body>
 </html>
