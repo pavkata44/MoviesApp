@@ -6,24 +6,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class LoginController {
+public class LogInController {
     private final UserService userService;
 
-    public LoginController(UserService userService) {
+    public LogInController(UserService userService) {
         this.userService = userService;
     }
 
     @PostMapping("/login")
-    public String processLoginForm(Model model,@ModelAttribute("user") User user) {
+    public String processLoginForm(@ModelAttribute("user") User user,Model model) {
         if (userService.authenticate(user)) {
             return "redirect:/";
-        } else {
+        }
+        else {
+            model.addAttribute("error", "Incorrect Username & Password");
             return "login";
         }
-
     }
-//        @GetMapping("/login")
-//    public String loginForm(Model model){
-//        return "login";
-//    }
+        @GetMapping("/login")
+    public String loginForm(Model model){
+        return "login";
+    }
 }
