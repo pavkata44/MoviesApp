@@ -2,9 +2,11 @@ package com.example.movies.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.net.PasswordAuthentication;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,6 +15,7 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+
 
     public  void addNewUser(User user) throws IllegalAccessException {
       Optional<User>  userByUsername = userRepository.findUserByUsername(user.getUsername());
@@ -23,12 +26,13 @@ public class UserService {
 
     }
 
-    public void signIn(User user){
-        Optional<User> userByUsername = userRepository.findUserByUsername(user.getUsername());
-        Optional<User> userByPassword = userRepository.findUserByPassword((user.getPassword()));
-        if(userByUsername.isPresent() && userByPassword.isPresent()){
-
+    public boolean authenticate(User user) {
+        Optional<User>  userByUsername = userRepository.findUserByUsername(user.getUsername());
+        Optional<User> userByPassword = userRepository.findUserByPassword(user.getPassword());
+        if(!userByUsername.isPresent() || !userByPassword.isPresent()) {
+            return false;
         }
+        return true;
     }
 
     @GetMapping()

@@ -4,6 +4,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,4 +23,8 @@ public class UserConfig {
 //        };
 //
 //    }
+//@Bean
+//public PasswordEncoder passwordEncoder() {
+//    return new BCryptPasswordEncoder();
+//}
 }
