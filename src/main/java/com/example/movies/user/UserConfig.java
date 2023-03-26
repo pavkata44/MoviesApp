@@ -17,8 +17,8 @@ public class UserConfig {
 //            List<User> users = new ArrayList<>();
 //            User idiot = new User();
 //            idiot.setRole(Role.Admin);
-//            idiot.setPassword("123");
-//            idiot.setUsername("Pavka");
+//            idiot.setPassword("1234");
+//            idiot.setUsername("Pavka6");
 //            repository.save(idiot);
 //        };
 //

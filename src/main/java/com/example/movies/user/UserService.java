@@ -27,13 +27,25 @@ public class UserService {
     }
 
     public boolean authenticate(User user) {
-        Optional<User>  userByUsername = userRepository.findUserByUsername(user.getUsername());
-        Optional<User> userByPassword = userRepository.findUserByPassword(user.getPassword());
-        if(!userByUsername.isPresent() || !userByPassword.isPresent()) {
+       Optional<User> findUser = userRepository.findUserByUsernameAndPassword(user.getUsername(),user.getPassword());
+       if(findUser.isEmpty()){
             return false;
         }
         return true;
     }
+    public boolean isUsernameEmpty(User user){
+        if(user.getUsername().isBlank()){
+            return true;
+        }
+        return  false;
+    }
+    public boolean isPasswordEmpty(User user){
+        if(user.getPassword().isBlank()){
+            return true;
+        }
+        return  false;
+    }
+
 
     @GetMapping()
     public ResponseEntity<List<User>> getAllUsers(){

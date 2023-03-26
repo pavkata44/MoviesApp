@@ -15,13 +15,36 @@ public class LogInController {
 
     @PostMapping("/login")
     public String processLoginForm(@ModelAttribute("user") User user,Model model) {
-        if (userService.authenticate(user)) {
-            return "redirect:/";
-        }
-        else {
-            model.addAttribute("error", "Incorrect Username & Password");
+
+        boolean isUsernameEmpty = userService.isUsernameEmpty(user);
+        boolean isPasswordEmpty = userService.isPasswordEmpty(user);
+
+        if (isUsernameEmpty && isPasswordEmpty) {
+            model.addAttribute("blankUsername", "Username cannot be empty");
+            model.addAttribute("blankPassword", "Password cannot be empty");
             return "login";
         }
+
+        if (isUsernameEmpty) {
+            model.addAttribute("blankUsername", "Username cannot be empty");
+            return "login";
+        }
+
+        if (isPasswordEmpty) {
+            model.addAttribute("blankPassword", "Password cannot be empty");
+            return "login";
+        }
+
+        boolean isUserAuthenticated = userService.authenticate(user);
+
+        if (isUserAuthenticated) {
+            return "redirect:/";
+        } else {
+            model.addAttribute("error", "Incorrect Username or Password");
+            return "login";
+        }
+
+
     }
         @GetMapping("/login")
     public String loginForm(Model model){
